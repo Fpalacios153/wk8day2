@@ -34,6 +34,19 @@ const server = http.createServer((req, res) => {
 
     /* ======================== ROUTE HANDLERS ========================== */
     // Phase 1: GET /
+    if (req.method === 'GET' && req.url === '/'){
+
+      const introPage = fs.readFileSync("./views/new-player.html", 'utf-8')
+
+
+
+
+
+      res.statusCode = 200
+      res.setHeader()
+      return res.end()
+    }
+
 
     // Phase 2: POST /player
 
